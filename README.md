@@ -29,3 +29,20 @@ echo $JRE_HOME
 ```
 
 
+```
+match case / switch
+
+Function **
+
+Companion Object
+
+try / catch -- error handling
+Either
+Try, Success
+Future
+Option
+
+
+Collections 
+
+```

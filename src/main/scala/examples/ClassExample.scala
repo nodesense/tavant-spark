@@ -2,6 +2,7 @@ package examples
 
 object ClassExample extends  App {
     // no is a value type/immutable, public scope
+    // constructor
     class Invoice(val no: String,
                   private val amount: Double,
                   protected val discount: Double) {
@@ -27,6 +28,9 @@ object ClassExample extends  App {
     println("Amount " + inv1.getAmount())
 
     println("Net " + inv1.netAmount())
+
+  val inv2 = new Invoice("INV#002", 9999.99, 20)
+  println("inv1 " + inv2.no) // access public
 
 
 
