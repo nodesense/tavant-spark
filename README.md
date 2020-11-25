@@ -10,7 +10,6 @@ JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 PATH="/usr/lib/jvm/java-8-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-
 Ctrl + O - to save file
 
 Ctrl + X - to exit
@@ -35,17 +34,13 @@ match case / switch
 Function **
 
 Companion Object
-
 try / catch -- error handling
 
 Either
 Try, Success
 Future
 Option
-
-
 Collections 
-
 ```
 
 ## Linux
@@ -54,9 +49,7 @@ Collections
   ssh root@ipaddress
 
   apt update
-
   apt upgrade
-
      
   sudo apt install openjdk-8-jdk -y
   
