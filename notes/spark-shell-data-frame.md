@@ -27,7 +27,7 @@ val df2 = df.select("_c1", "_c2")
 
 val df3 = df2.filter("_c1 is not null").filter("_c3 is not null").filter("_c3 = 'mobile'")
 
- val df = spark.read.option("header", "true").csv("file:///Users/krish/workshops/scala-workshop/inputs/sales-header.csv")
+ val df = spark.read.option("header", "true").option("inferSchema", "true").csv("file:///Users/krish/workshops/scala-workshop/inputs/sales-header.csv")
 df.printSchema()
 df.show()
 
@@ -69,4 +69,7 @@ results.write.format("csv").save("file:///Users/krish/workshops/scala-workshop/o
 
 results.write.format("csv").option("header","true").save("file:///Users/krish/workshops/scala-workshop/outputs/zipcodes-df")
 
+ 
+ timestamp (2020-12:12 10:12:34) => date(2020-12-12)
+ 
  
