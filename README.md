@@ -1,3 +1,20 @@
+```
+    open terminal 
+    in hte home directory
+    
+    git clone https://github.com/nodesense/tavant-spark
+
+
+    Open Intellji
+
+    import existing from source
+    
+    build and run
+    
+
+```
+
+
 
 ```
 sudo apt install openjdk-8-jdk -y

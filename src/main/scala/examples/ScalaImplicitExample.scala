@@ -14,7 +14,7 @@ object ScalaImplicitExample extends  App {
       println("doubleToInt called")
       d.toInt
     }
-    val x: Int = 42.0 // shall call doubleToInt automatically
+    val x: Int = 42.0 // shall call doubleToInt automatically/implicitly by compiler
     println("X ", x)
     val y: Int = 42.0  // shall call doubleToInt automatically
   }
