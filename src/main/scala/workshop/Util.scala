@@ -7,3 +7,4 @@ object Util {
   def getInputPath(fileName: String) = INPUT_DIRECTORY + "/" + fileName
   def getOutputPath(fileName: String) = OUTPUT_DIRECTORY + "/" + fileName
 }
+

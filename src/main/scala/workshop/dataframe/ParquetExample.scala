@@ -26,9 +26,9 @@ object ParquetExample {
     df.printSchema()
 
     df.write
-      .parquet("C:\\tmp\\output\\people.parquet")
+      .parquet(workshop.Util.getOutputPath("people.parquet"))
 
-    val parqDF = spark.read.parquet("C:\\tmp\\output\\people.parquet")
+    val parqDF = spark.read.parquet(workshop.Util.getOutputPath("people.parquet"))
     parqDF.createOrReplaceTempView("ParquetTable")
 
     spark.sql("select * from ParquetTable where salary >= 4000").explain()
@@ -39,9 +39,9 @@ object ParquetExample {
 
     df.write
       .partitionBy("gender","salary")
-      .parquet("C:\\tmp\\output\\people2.parquet")
+      .parquet(workshop.Util.getOutputPath("people2.parquet"))
 
-    val parqDF2 = spark.read.parquet("C:\\tmp\\output\\people2.parquet")
+    val parqDF2 = spark.read.parquet(workshop.Util.getOutputPath("people2.parquet"))
     parqDF2.createOrReplaceTempView("ParquetTable2")
 
     val df3 = spark.sql("select * from ParquetTable2  where gender='M' and salary >= 4000")
@@ -50,7 +50,7 @@ object ParquetExample {
     df3.show()
 
     val parqDF3 = spark.read
-      .parquet("C:\\tmp\\output\\people2.parquet\\gender=M")
+      .parquet(workshop.Util.getOutputPath("people2.parquet"))
     parqDF3.show()
 
   }
