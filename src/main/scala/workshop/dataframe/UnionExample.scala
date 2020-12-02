@@ -32,7 +32,9 @@ object UnionExample extends App{
   df2.show(false)
 
   val df3 = df.union(df2)
+  println("**Union")
   df3.show(false)
+  println("**distinct")
   df3.distinct().show(false)
 
   val df4 = df.unionAll(df2)

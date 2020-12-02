@@ -43,7 +43,8 @@ object AvroExample {
     /**
       * Read Avro File
       */
-    spark.read.format("avro").load(workshop.Util.getOutputPath("person.avro")).show()
+    spark.read.format("avro")
+        .load(workshop.Util.getOutputPath("person.avro")).show()
 
     /**
       * Write Avro Partition
@@ -66,7 +67,7 @@ object AvroExample {
       * Explicit Avro schema
       */
     val schemaAvro = new Schema.Parser()
-      .parse(new File("src/main/resources/person.avsc"))
+      .parse(new File(workshop.Util.getOutputPath("person.avro")))
 
     spark.read
       .format("avro")

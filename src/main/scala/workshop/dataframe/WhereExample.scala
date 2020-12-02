@@ -37,22 +37,31 @@ object WhereExample extends App{
   df.show()
 
   //Condition
+  // scala condition
+  // pick column state from dataframe and filter with if state == "OH" in scala construct
+  // option to write low level code
   df.where(df("state") === "OH")
     .show(false)
 
   //SQL Expression
+  // Use SQL Engine / catalizt engine to perform the check
+  // SQL part select * from mytable where gender='M'
+  // sql level code / high level
   df.where("gender == 'M'")
     .show(false)
 
   //multiple condition
+  // scala
   df.where(df("state") === "OH" && df("gender") === "M")
     .show(false)
 
   //Array condition
+  // scala
   df.where(array_contains(df("languages"),"Java"))
     .show(false)
 
   //Struct condition
+  // scala
   df.where(df("name.lastname") === "Williams")
     .show(false)
 

@@ -12,6 +12,8 @@ object WithColumn {
       .appName("SparkByExamples.com")
       .getOrCreate()
 
+    spark.sparkContext.setLogLevel("ERROR")
+
 
     val arrayStructureData = Seq(
       Row(Row("James ","","Smith"), // column 1 with structured data

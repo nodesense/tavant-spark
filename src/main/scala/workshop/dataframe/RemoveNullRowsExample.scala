@@ -14,7 +14,8 @@ object RemoveNullRowsExample extends App{
   val df = spark.read.options(Map("inferSchema"->"true","delimiter"->",","header"->"true")).csv(filePath)
   df.printSchema()
   df.show(false)
-
+  // na - nulls
+  // dropping all null rows
   df.na.drop()
     .show(false)
 

@@ -36,4 +36,15 @@ object SparkUDF extends App{
   df.createOrReplaceTempView("QUOTE_TABLE")
   spark.sql("select Seqno, convertUDF(Quote) from QUOTE_TABLE").show(false)
 
+  // define a function myMin which accept two integer, return the minimum number
+  // register in udf called myMin
+  // select myMin(10, 20) from table
+
+  val myMin = (a: Int, b: Int) => if (a < b) a else b
+  def myMax (a: Int, b: Int) = if (a > b) a else b
+  spark.udf.register("myMin", myMin)
+  spark.udf.register("myMax", (myMax _))
+
+  spark.sql("select myMin(10, 20) as min, myMax(10, 20) as max").show()
+
 }

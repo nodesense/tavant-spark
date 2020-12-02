@@ -41,10 +41,12 @@ object JoinExample extends App {
   println("Outer join")
   empDF.join(deptDF,empDF("emp_dept_id") ===  deptDF("dept_id"),"outer")
     .show(false)
+
   println("full join")
   empDF.join(deptDF,empDF("emp_dept_id") ===  deptDF("dept_id"),"full")
     .show(false)
   println("fullouter join")
+
   empDF.join(deptDF,empDF("emp_dept_id") ===  deptDF("dept_id"),"fullouter")
     .show(false)
 
@@ -84,6 +86,10 @@ object JoinExample extends App {
       col("emp2.emp_id").as("superior_emp_id"),
       col("emp2.name").as("superior_emp_name"))
       .show(false)
+
+  // -- scala over
+
+  // sql example begin
 
   empDF.createOrReplaceTempView("EMP")
   deptDF.createOrReplaceTempView("DEPT")
