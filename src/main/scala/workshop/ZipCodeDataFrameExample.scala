@@ -35,5 +35,15 @@ object ZipCodeDataFrameExample extends  App {
       .mode("overwrite") // overwrite
       .save(Util.getOutputPath("zipcodes-df2"));
 
+  // Copy to hdfs
+  resultsDF
+    .write
+    .format("csv")
+    .option("header","true")
+    .mode("overwrite") // overwrite
+    .save("hdfs://localhost:9000/test/zipcodes.csv");
+    //.save("hdfs://localhost:9000/test/zipcodes.csv");
+
+
   spark.close();
 }
