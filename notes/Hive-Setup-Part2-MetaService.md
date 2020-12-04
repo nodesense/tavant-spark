@@ -31,7 +31,7 @@ now metastore is listening on port 9083, keep this running
 ----
 
 HIVE CLI
-
+cd $HIVE_HOME
 $HIVE_HOME/bin/hive
 
 
@@ -41,11 +41,24 @@ beeline start the jdbc connection
 
 open new terminal, you can susbctitue host/db/password if other host
 
-
+cd $HIVE_HOME
  $HIVE_HOME/bin/beeline -u jdbc:hive2://
  
 
 
+
+create table invoices(id STRING, amount INT);
+
+insert into invoices values('1', 1000);
+insert into invoices values('2', 2000);
+
+
+
+
+
+do select query in either cli
+
+select * from invoices;
 
 
 

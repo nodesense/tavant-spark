@@ -190,5 +190,12 @@ hdfs namenode -format
 
 
 ls /data/hdfs
-start-all.sh
+
+$HADOOP_HOME/sbin/start-all.sh
+
 open browser, check http://localhost:50070
+
+
+to stop hadoopm, 
+  
+  $HADOOP_HOME/sbin/stop-all.sh 
