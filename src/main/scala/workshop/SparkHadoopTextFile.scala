@@ -11,7 +11,6 @@ object SparkHadoopTextFile extends  App {
   import spark.implicits._
 
   // replace localhost with ip address or domain name
-  // val rddHadoopFile = spark.sparkContext.textFile("hdfs://localhost/test/order1.csv")
-  val rddHadoopFile = spark.sparkContext.textFile("hdfs://k1.training.sh:9000/test/order1.csv")
+  val rddHadoopFile = spark.sparkContext.textFile("hdfs://localhost:9000/test/order1.csv")
   rddHadoopFile.foreach(println)
 }
