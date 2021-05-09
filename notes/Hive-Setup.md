@@ -1,4 +1,6 @@
-https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gzopen terminal
+https://archive.apache.org/dist/hadoop/common/hadoop-2.7.7/hadoop-2.7.7.tar.gz 
+
+open terminal
 
 be in home directory /home/username
 
